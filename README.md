@@ -18,7 +18,7 @@
 
 ## 界面预览
 
-![白玉兰课件连播助手：扩展与脚本共用的精简界面](store-assets/preview-compact.png)
+![白玉兰课件连播助手：扩展与脚本共用的精简界面](docs/assets/preview-compact.png)
 
 截图为本地演示环境，不包含真实账号或课程数据。主要操作是“开始/暂停”和“静音播放”；倍速与错误日志默认收起。
 
@@ -60,7 +60,7 @@
 - **没有自动切课**：确认自动切课开启，官网没有提示或验证；跨域播放器或网站结构变化可能需要适配。不要只根据面板判断课时已入账。
 - **反馈问题**：展开“帮助与日志”，导出后到 [GitHub Issues](https://github.com/jiamuho/byljx-helper/issues) 提交，附浏览器版本、助手版本和操作步骤。
 
-![白玉兰学习助手：本地错误日志、诊断与导出](store-assets/preview-logs.png)
+![白玉兰学习助手：本地错误日志、诊断与导出](docs/assets/preview-logs.png)
 
 ## 隐私与权限
 
@@ -91,7 +91,6 @@ byljx-helper.user.js        # 生成的脚本安装文件
 tools/                     # 构建、图标、跨平台 ZIP 打包
 tests/                     # 双版本检查和浏览器演示验证
 docs/                      # GitHub Pages 项目介绍与下载页
-store-assets/              # 原创演示截图和商店材料
 ```
 
 自动检查包含双版本模拟行为测试和共享源码一致性检查。浏览器演示测试模拟扩展 API，不等同于真实安装、脚本管理器运行或登录后的官网端到端验收。可设置 `BYL_TEST_BROWSER` 指向本机 Chromium 浏览器，再运行 `npm run test:browser`。

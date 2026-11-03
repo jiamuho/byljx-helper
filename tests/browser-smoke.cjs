@@ -6,7 +6,10 @@ const os = require('node:os');
 const assert = require('node:assert/strict');
 const { chromium } = require('../tools/dependencies.cjs')('playwright');
 const root = path.resolve(__dirname, '..');
-const out = path.join(root, 'store-assets');
+const out = path.join(root, 'docs', 'assets');
+const results = path.join(root, 'test-results');
+fs.mkdirSync(out, { recursive: true });
+fs.mkdirSync(results, { recursive: true });
 const fixture = `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>
 *{box-sizing:border-box}body{margin:0;background:#f0f4f0;color:#294438;font-family:system-ui,"Microsoft YaHei",sans-serif}header{padding:26px 48px;background:#fff;border-bottom:1px solid #dce5dc;display:flex;align-items:center;justify-content:space-between}h1{font-size:20px;margin:0}header span{font-size:13px;color:#7d8e80}main{margin:30px 48px;display:grid;grid-template-columns:1fr 250px;gap:22px}.player{height:545px;border-radius:14px;background:#1e3a30;position:relative;overflow:hidden}video{width:100%;height:100%;object-fit:contain}.subjectList___demo{background:white;border-radius:14px;padding:20px}.subjectList___demo div{padding:17px 12px;margin:0 0 10px;font-size:13px;border-radius:9px;color:#789184;cursor:pointer}.subjectList___demo .playerText___demo{background:#e8f4ed;color:#237657;font-weight:600}.tip{margin:0 48px;color:#7f9185;font-size:12px}
 </style></head><body><header><h1>课件播放 · 演示环境</h1><span>界面演示，不连接真实学习记录</span></header><main><div class="player"><video playsinline></video></div><aside class="subjectList___demo"><div class="playerText___demo">01 · 课程导览</div><div class="unPlayerText___demo">02 · 重点内容</div><div class="unPlayerText___demo">03 · 回顾与总结</div></aside></main><p class="tip">示意课件画面 · 不包含账号或真实课程内容</p><canvas width="1100" height="650" style="position:fixed;left:0;top:0;width:110px;height:65px"></canvas><script>
@@ -73,10 +76,10 @@ for(const row of document.querySelector('[class*="subjectList"]').children)row.o
     assert.equal(await popup.locator('#version').textContent(), '1.2.0');
     await popup.getByRole('button', { name: '打开白玉兰学习网站' }).click();
     assert.equal(await popup.evaluate(() => window.__openedUrl), 'https://byljxjy.com/');
-    await popup.locator('body').screenshot({ path: path.join(out, 'preview-popup.png') });
+    await popup.locator('body').screenshot({ path: path.join(results, 'preview-popup.png') });
     await popup.goto(require('node:url').pathToFileURL(path.join(root, 'extension/privacy.html')).href);
     assert.match(await popup.locator('h1').textContent(), /隐私说明/);
-    fs.writeFileSync(path.join(out, 'browser-test-result.json'), JSON.stringify({ browser: await browser.version(), date: '2026-11-03', api: 'mock chrome API on a local fixture; not a loaded extension', checks: ['media playback', 'mute and volume restoration behavior', 'rate', 'pause', 'delayed next lesson', 'error log', 'download report without identifiers', 'clear logs', 'narrow viewport', 'no uncaught page errors', 'popup and open-site action', 'privacy page'], passed: true }, null, 2));
+    fs.writeFileSync(path.join(results, 'browser-test-result.json'), JSON.stringify({ browser: await browser.version(), date: '2026-11-03', api: 'mock chrome API on a local fixture; not a loaded extension', checks: ['media playback', 'mute and volume restoration behavior', 'rate', 'pause', 'delayed next lesson', 'error log', 'download report without identifiers', 'clear logs', 'narrow viewport', 'no uncaught page errors', 'popup and open-site action', 'privacy page'], passed: true }, null, 2));
     console.log('Browser fixture checks passed; two 1280x800 previews saved. Extension API is simulated; native store installation still needs acceptance.');
     await context.close();
   } finally { await browser.close(); }

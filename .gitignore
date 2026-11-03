@@ -7,6 +7,8 @@ review/
 *.log
 test-results/
 playwright-report/
-store-assets/browser-test-result.json
+store-assets/
+商店发布说明.md
+商店文案.md
 tests/helper.test.cjs
 脚本审查.md
