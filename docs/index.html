@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>白玉兰课件连播助手｜白玉兰远程医学网脚本与 Chrome / Edge 扩展</title>
+  <meta name="description" content="白玉兰课件连播助手，适用于白玉兰远程医学网 byljxjy.com。提供课件自动连播、静音播放、倍速、本地错误日志。浏览器扩展与油猴脚本统一界面，MIT 开源，附下载和安装教程。">
+  <meta name="keywords" content="白玉兰,白玉兰远程医学网,白玉兰学习助手,白玉兰课件连播,白玉兰脚本,白玉兰浏览器扩展,byljxjy,Tampermonkey,ScriptCat">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://jiamuho.github.io/byljx-helper/">
+  <link rel="icon" href="assets/icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="白玉兰课件连播助手 · 开源脚本与浏览器扩展">
+  <meta property="og:description" content="课件自动连播、静音、倍速、本地错误日志。扩展与脚本同一界面，免费下载，MIT 开源。">
+  <meta property="og:url" content="https://jiamuho.github.io/byljx-helper/">
+  <meta property="og:image" content="https://jiamuho.github.io/byljx-helper/assets/preview-compact.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"白玉兰课件连播助手","applicationCategory":"BrowserApplication","operatingSystem":"Chrome, Edge; Tampermonkey, ScriptCat","softwareVersion":"1.2.0","url":"https://jiamuho.github.io/byljx-helper/","codeRepository":"https://github.com/jiamuho/byljx-helper","license":"https://opensource.org/license/mit","description":"适用于白玉兰远程医学网的非官方课件播放助手，支持自动连播、静音、倍速和本地错误日志。","offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"}}</script>
+  <style>
+    :root{color-scheme:light;font-family:system-ui,"Microsoft YaHei",sans-serif;color:#243e32;background:#f3f6f1}*{box-sizing:border-box}body{margin:0}a{color:#237657;text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid #82c8a2;outline-offset:4px}nav,main,footer{max-width:1060px;margin:auto;padding:24px}nav{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #dce7dc}nav strong{display:flex;align-items:center;gap:10px}nav img{width:36px;height:36px}.links{display:flex;gap:18px;font-size:13px}.hero{padding:56px 0 28px}.tag{color:#6b846f;font-size:13px;letter-spacing:1px}h1{font-size:clamp(30px,4.7vw,48px);line-height:1.3;max-width:780px;margin:18px 0}h1 span{color:#237657}.lead{max-width:760px;color:#617666;line-height:1.9;font-size:17px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.button{display:inline-block;padding:13px 20px;background:#237657;color:#fff;border-radius:11px;text-decoration:none;font-size:14px}.button.secondary{background:white;color:#237657;border:1px solid #cddfcf}.notice{font-size:13px;line-height:1.8;background:#fff8e9;border:1px solid #ede0b9;padding:14px 18px;border-radius:12px;color:#7b622b}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}.card,article{background:white;border:1px solid #e0e9df;border-radius:16px;padding:22px}.card h3{font-size:16px;margin:0 0 8px}.card p{font-size:14px;line-height:1.9;color:#647d69;margin:0}h2{font-size:23px;margin:40px 0 20px}figure{margin:24px 0}figure img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid #dce7dc}figcaption{font-size:12px;color:#778b78;padding:9px 0}article{line-height:1.95;margin:15px 0}article h3{margin:0;font-size:18px}article ol{padding-left:22px}article p{margin:10px 0}code{font-size:13px;background:#eef4ec;padding:2px 5px;border-radius:4px}details{padding:16px 0;border-bottom:1px solid #dce7dc;line-height:1.9}summary{cursor:pointer;font-weight:600}details p{font-size:14px;color:#617666}footer{font-size:12px;color:#6f8371;border-top:1px solid #dce7dc;line-height:2;margin-top:36px}footer a{margin-right:14px}@media(max-width:700px){.grid{grid-template-columns:1fr}.hero{padding-top:30px}.links{gap:10px}nav,main,footer{padding:18px}.lead{font-size:15px}}
+  </style>
+</head>
+<body>
+  <nav><strong><img src="assets/icon.png" alt="">课件连播助手</strong><div class="links"><a href="#install">安装教程</a><a href="https://github.com/jiamuho/byljx-helper">GitHub 源码</a></div></nav>
+  <main>
+    <section class="hero">
+      <p class="tag">白玉兰适用 · v1.2.0 · MIT 开源</p>
+      <h1>白玉兰课件连播助手<br><span>让播放操作更省心</span></h1>
+      <p class="lead">为白玉兰远程医学网（byljxjy.com）提供课件自动连播、静音播放、倍速和本地错误日志。Chrome / Edge 扩展与油猴脚本使用同一套简洁界面，免费开放源码。</p>
+      <div class="buttons"><a class="button" href="https://github.com/jiamuho/byljx-helper/releases/download/v1.2.0/byljx-helper-1.2.0-chrome-edge.zip">下载浏览器扩展 ZIP</a><a class="button secondary" href="https://raw.githubusercontent.com/jiamuho/byljx-helper/main/byljx-helper.user.js">安装脚本版</a><a class="button secondary" href="https://github.com/jiamuho/byljx-helper/releases/latest">版本与校验文件</a></div>
+      <p class="notice">当前为 GitHub 发布版，Chrome / Edge 商店尚未上架。扩展 ZIP 需解压后加载，脚本版需 Tampermonkey 或 ScriptCat。两种版本只选一种使用。</p>
+    </section>
+    <section aria-label="主要功能" class="grid"><div class="card"><h3>播完自动切下一课</h3><p>视频自然播完后等待 5 秒，再切换当前列表下一课。可随时暂停，最后一课结束后停止。</p></div><div class="card"><h3>静音与倍速控制</h3><p>静音兼容播放器音量重置，取消时恢复原音量。设置倍速时可查看播放器实际速度。</p></div><div class="card"><h3>问题有提示，日志在本机</h3><p>网络、播放或切课失败会显示提醒。日志支持查看、导出、清空，不自动上传。</p></div></section>
+    <figure><img src="assets/preview-compact.png" width="1280" height="800" alt="白玉兰课件连播助手统一界面：开始暂停、静音、播放设置及帮助日志"><figcaption>功能演示画面，不含真实课程和账号信息；扩展与脚本使用相同面板。</figcaption></figure>
+    <section id="install"><h2>白玉兰学习助手安装教程</h2><article><h3>Chrome / Edge 扩展版</h3><ol><li>下载并解压扩展 ZIP，确认文件夹中直接有 <code>manifest.json</code>。</li><li>Chrome 打开 <code>chrome://extensions</code>，Edge 打开 <code>edge://extensions</code>。</li><li>开启开发者模式，选择“加载已解压的扩展程序”或“加载解压缩的扩展”，选中解压后的文件夹。</li><li>停用旧脚本、刷新白玉兰课件页，登录自己的账号后点击“开始连播”。</li></ol><p>正式商店版本上架后会在此补充一键安装入口。当前 ZIP 不能双击直接安装。</p></article><article><h3>油猴 / 脚本猫脚本版</h3><ol><li>先安装并启用 Tampermonkey 或 ScriptCat。</li><li>点击本页“安装脚本版”，在脚本管理器弹出的页面确认安装。</li><li>若只显示源码，可在脚本管理器中新建脚本，粘贴完整内容保存。</li><li>停用重复版本并刷新官网课件页，再点击“开始连播”。</li></ol><p>新版使用脚本管理器存储自己的偏好，首次升级后需要重新设置。</p></article></section>
+    <section><h2>日志与问题反馈</h2><p class="lead">展开“帮助与日志”查看错误及播放器状态，导出后在 <a href="https://github.com/jiamuho/byljx-helper/issues">GitHub Issues</a> 反馈。请同时说明浏览器版本、助手版本和重现步骤，截图时遮住个人资料。</p><figure><img loading="lazy" src="assets/preview-logs.png" width="1280" height="800" alt="白玉兰脚本与扩展的错误日志、诊断及导出功能"><figcaption>日志只在当前页面内存保留最近 200 条，刷新或关闭后清除。</figcaption></figure></section>
+    <section><h2>常见问题</h2><details><summary>白玉兰课件连播脚本与浏览器扩展有什么区别？</summary><p>两者来自同一份源码，界面和功能一致。扩展通过浏览器安装，脚本需要脚本管理器；本地设置分别保存，不能同时启用两个版本。</p></details><details><summary>倍速是否能缩短官网认可的课时？</summary><p>播放器实际速度与官网计时规则是两件事。学习进度、课时和倍速是否被认可，均以官网记录为准。本工具不直接提交学习记录、不自动考试、不承诺一分钟完成课程。</p></details><details><summary>静音勾选了，muted 却显示 false，正常吗？</summary><p>如果实际音量为 0%，仍然是无声状态。工具会兼容播放器自行取消 muted 的情况，取消静音会恢复原音量。</p></details><details><summary>为什么点击开始后仍未播放或没有自动切课？</summary><p>浏览器可能要求先点击视频播放键；官网提示框、验证需要手动处理。跨域播放器或网站结构变化也可能需要适配。请查看帮助日志并反馈。</p></details><details><summary>是否收集账号或上传日志？</summary><p>不读取账号密码、Cookie、登录凭证、姓名或手机号，不主动向开发者发送数据。设置保存在本机，日志仅在当前页面内存保留，导出由你主动发起。详见隐私说明。</p></details></section>
+  </main>
+  <footer><p>非官方开源工具，与白玉兰平台没有隶属或授权关系。适用网站：byljxjy.com。学习记录以官网为准。</p><a href="https://github.com/jiamuho/byljx-helper">源码仓库</a><a href="https://github.com/jiamuho/byljx-helper/releases/latest">版本下载</a><a href="privacy.html">隐私说明</a><a href="https://github.com/jiamuho/byljx-helper/issues">支持与反馈</a><p>© 2026 jiamuho · MIT License · 本页不使用统计脚本；页面及下载由 GitHub 托管。</p></footer>
+</body></html>

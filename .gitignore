@@ -1,0 +1,12 @@
+node_modules/
+dist/
+review/
+.private/
+.env
+.env.*
+*.log
+test-results/
+playwright-report/
+store-assets/browser-test-result.json
+tests/helper.test.cjs
+脚本审查.md

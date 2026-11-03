@@ -1,0 +1,26 @@
+{
+  "name": "byljx-helper",
+  "version": "1.2.0",
+  "private": true,
+  "description": "白玉兰远程医学网课件连播助手，Chrome/Edge扩展与油猴脚本",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiamuho/byljx-helper.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node tools/build.cjs",
+    "test": "node --test tests/extension.test.cjs tests/userscript.test.cjs",
+    "test:browser": "node tests/browser-smoke.cjs",
+    "check": "node --check src/helper.js && node --check extension/content.js && node --check byljx-helper.user.js",
+    "package": "node tools/package.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "29.1.1",
+    "sharp": "0.35.5",
+    "playwright": "1.64.1"
+  }
+}
